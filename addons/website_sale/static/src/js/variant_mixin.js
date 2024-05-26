@@ -57,6 +57,21 @@ VariantMixin._onChangeCombination = function (ev, $parent, combination) {
         contactUsButton.removeClass('d-flex').addClass('d-none');
         product_unavailable.removeClass('d-flex').addClass('d-none')
     }
+    if (combination.x_variant_width) {
+        $('#dimension_width').text(combination.x_variant_width);
+    }
+    if (combination.x_variant_height) {
+        $('#dimension_height').text(combination.x_variant_height);
+    }
+    if (combination.x_variant_depth) {
+        $('#dimension_depth').text(combination.x_variant_depth);
+    }
+    if (combination.x_variant_weight) {
+        $('#dimension_weight').text(combination.x_variant_weight);
+    }
+    if (combination.x_variant_attribute_name) {
+        $('#variant-dimensions-header').text(combination.x_variant_attribute_name);
+    }
     originalOnChangeCombination.apply(this, [ev, $parent, combination]);
 };
 

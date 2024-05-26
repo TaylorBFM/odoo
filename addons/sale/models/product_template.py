@@ -284,6 +284,11 @@ class ProductTemplate(models.Model):
             'list_price': list_price,
             'price_extra': price_extra,
             'has_discounted_price': has_discounted_price,
+            'x_variant_width': product.x_variant_width if product else None,
+            'x_variant_height': product.x_variant_height if product else None,
+            'x_variant_depth': product.x_variant_depth if product else None,
+            'x_variant_weight': product.x_variant_weight if product else None,
+            'x_variant_attribute_name': product.x_variant_attribute_name if product else None,
         }
 
     def _can_be_added_to_cart(self):
